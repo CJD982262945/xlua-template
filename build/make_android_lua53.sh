@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$ANDROID_NDK" ]; then
-    export ANDROID_NDK=~/android-ndk-r10e
+  export ANDROID_NDK=~/android-ndk-r10e
 fi
 
 mkdir -p build_v7a && cd build_v7a
@@ -17,5 +17,4 @@ cd ..
 cmake --build build_x86 --config Release
 mkdir -p plugin_lua53/Plugins/Android/libs/x86/
 cp build_x86/libxlua.so plugin_lua53/Plugins/Android/libs/x86/libxlua.so
-
 
